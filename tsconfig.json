@@ -19,6 +19,7 @@
     "lib": ["es5", "es2015", "dom"],
     "types": ["jasmine"],
     "baseUrl": ".",
+    "emitDecoratorMetadata":true,
     "paths": {
       "@angular/cdk": ["./src/cdk"],
       "@angular/cdk/*": ["./src/cdk/*"],

@@ -5,6 +5,7 @@ import { action } from '@storybook/addon-actions';
 
 import { HttpClientModule } from '@angular/common/http';
 import { MatButton } from '../material/button/button';
+import { MatRippleModule } from '../material/core/ripple'
 // @ts-ignore
 
 
@@ -17,7 +18,7 @@ export default {
       withKnobs,
       moduleMetadata({
         declarations: [MatButton],
-        imports: []
+        imports: [MatRippleModule]
       })
     ],
     // Module-Level 'in-dsm' configuration (Will apply to all stories inside the module)
@@ -30,12 +31,11 @@ export default {
 };
 
 export const simpleButton = () => ({
-  // template: '<button mat-button disabled>Test</button>',
-  template:'',
+  template: '<button mat-button>Text</button>',
   props: {
-    //textKnob: text('text', 'TEXT'),
+    textKnob: text('text', 'TEXT'),
     // iconKnob: select('icon', ['none', 'chevron-right'], 'none'),
-    // disabledKnob: boolean('disabled', false),
+    disabledKnob: boolean('disabled', false),
     // actionProp: () => action('Button clicked')('Click')
   }
 });
