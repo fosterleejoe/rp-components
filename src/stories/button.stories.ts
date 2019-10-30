@@ -1,10 +1,10 @@
 // tslint:disable-next-line:require-license-banner
-import {moduleMetadata} from '@storybook/angular';
-import {withKnobs, text, select, boolean} from '@storybook/addon-knobs';
-import {action} from '@storybook/addon-actions';
+import { moduleMetadata } from '@storybook/angular';
+import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
 
-import {HttpClientModule} from '@angular/common/http';
-import {MatButton} from '../material/button/button';
+import { HttpClientModule } from '@angular/common/http';
+import { MatButton } from '../material/button/button';
 // @ts-ignore
 
 
@@ -30,10 +30,10 @@ export default {
 };
 
 export const simpleButton = () => ({
-  template:
-    '<button mat-button >Test</button>',
+  // template: '<button mat-button disabled>Test</button>',
+  template:'',
   props: {
-    // textKnob: text('text', 'TEXT'),
+    //textKnob: text('text', 'TEXT'),
     // iconKnob: select('icon', ['none', 'chevron-right'], 'none'),
     // disabledKnob: boolean('disabled', false),
     // actionProp: () => action('Button clicked')('Click')
