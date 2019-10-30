@@ -570,6 +570,7 @@ export class MatTooltip implements OnDestroy, OnInit {
           // Note that it's important that we don't `preventDefault` here,
           // because it can prevent click events from firing on the element.
           clearTimeout(this._touchstartTimeout);
+          // @ts-ignore
           this._touchstartTimeout = setTimeout(() => this.show(), LONGPRESS_DELAY);
         });
     }
@@ -667,6 +668,7 @@ export class TooltipComponent implements OnDestroy {
 
     // Body interactions should cancel the tooltip if there is a delay in showing.
     this._closeOnInteraction = true;
+    // @ts-ignore
     this._showTimeoutId = setTimeout(() => {
       this._visibility = 'visible';
       this._showTimeoutId = null;
@@ -687,7 +689,7 @@ export class TooltipComponent implements OnDestroy {
       clearTimeout(this._showTimeoutId);
       this._showTimeoutId = null;
     }
-
+    // @ts-ignore
     this._hideTimeoutId = setTimeout(() => {
       this._visibility = 'hidden';
       this._hideTimeoutId = null;

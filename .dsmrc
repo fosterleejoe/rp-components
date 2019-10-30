@@ -1,0 +1,7 @@
+{
+  "authToken": "S1Vz0CL5H",
+  "dsmHost": "trilogy.invisionapp.com",
+  "organization": "trilogy",
+  "outputDir": ".dsm",
+  "storyPath": "src/stories/**/*.stories.ts"
+}

@@ -120,6 +120,7 @@ export class FocusMonitor implements OnDestroy {
     // will have their `target` set to the shadow root. If available, use `composedPath` to
     // figure out the event target.
     this._lastTouchTarget = event.composedPath ? event.composedPath()[0] : event.target;
+    // @ts-ignore
     this._touchTimeoutId = setTimeout(() => this._lastTouchTarget = null, TOUCH_BUFFER_MS);
   }
 
@@ -292,6 +293,7 @@ export class FocusMonitor implements OnDestroy {
       // Sometimes the focus origin won't be valid in Firefox because Firefox seems to focus *one*
       // tick after the interaction event fired. To ensure the focus origin is always correct,
       // the focus origin will be determined at the beginning of the next tick.
+      // @ts-ignore
       this._originTimeoutId = setTimeout(() => this._origin = null, 1);
     });
   }

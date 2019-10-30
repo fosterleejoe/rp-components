@@ -90,6 +90,7 @@ export class MatSnackBarRef<T> {
   _dismissAfter(duration: number): void {
     // Note that we need to cap the duration to the maximum value for setTimeout, because
     // it'll revert to 1 if somebody passes in something greater (e.g. `Infinity`). See #17234.
+    // @ts-ignore
     this._durationTimeoutId = setTimeout(() => this.dismiss(), Math.min(duration, MAX_TIMEOUT));
   }
 

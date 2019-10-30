@@ -117,11 +117,13 @@ export class LiveAnnouncer implements OnDestroy {
     return this._ngZone.runOutsideAngular(() => {
       return new Promise(resolve => {
         clearTimeout(this._previousTimeout);
+        // @ts-ignore
         this._previousTimeout = setTimeout(() => {
           this._liveElement.textContent = message;
           resolve();
 
           if (typeof duration === 'number') {
+            // @ts-ignore
             this._previousTimeout = setTimeout(() => this.clear(), duration);
           }
         }, 100);

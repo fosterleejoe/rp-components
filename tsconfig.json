@@ -7,13 +7,13 @@
     "module": "es2015",
     "moduleResolution": "node",
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
+    "noFallthroughCasesInSwitch": false,
     "noUnusedLocals": false,
-    "strictNullChecks": true,
-    "noImplicitReturns": true,
-    "strictFunctionTypes": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
+    "strictNullChecks": false,
+    "noImplicitReturns": false,
+    "strictFunctionTypes": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
     "skipLibCheck": true,
     "target": "es2015",
     "lib": ["es5", "es2015", "dom"],
@@ -32,10 +32,10 @@
     }
   },
   "include": [
-    "src/**/*.ts",
-    "e2e/**/*.ts",
-    "test/**/*.ts",
-    "tools/**/*.ts"
+    "src/material/**/*.ts",
+    // "e2e/**/*.ts",
+    // "test/**/*.ts",
+    // "tools/**/*.ts"
   ],
   "exclude": [
     // Exclude files that depend on Node APIs because those depend on the Node types and therefore
@@ -53,6 +53,6 @@
     "src/material/schematics/ng-generate/*/files/**/*",
     "src/cdk/schematics/ng-generate/*/files/**/*",
     "src/cdk/schematics/ng-update/test-cases/**/*",
-    "src/material/schematics/ng-update/test-cases/**/*"
+    "src/material/schematics/ng-update/test-cases/**/*",
   ]
 }

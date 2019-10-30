@@ -101,6 +101,7 @@ export class MatBottomSheetRef<T = any, R = any> {
         // timeout which will clean everything up if the animation hasn't fired within the specified
         // amount of time plus 100ms. We don't need to run this outside the NgZone, because for the
         // vast majority of cases the timeout will have been cleared before it has fired.
+        // @ts-ignore
         this._closeFallbackTimeout = setTimeout(() => {
           this._overlayRef.dispose();
         }, event.totalTime + 100);

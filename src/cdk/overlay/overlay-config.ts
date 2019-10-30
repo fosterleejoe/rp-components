@@ -74,6 +74,7 @@ export class OverlayConfig {
           // is not smart enough to see that the right-hand-side is actually an access of the same
           // exact type with the same exact key, meaning that the value type must be identical.
           // So we use `any` to work around this.
+          // @ts-ignore
           this[key] = config[key] as any;
         }
       }

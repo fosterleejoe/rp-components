@@ -138,7 +138,7 @@ function findConstructorNode(
   };
 
   ts.forEachChild(sourceFile, _visitNode);
-
+  //@ts-ignore
   return resolvedNode;
 }
 

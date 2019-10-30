@@ -1,0 +1,22 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "../src/material/**/*",
+  ],
+  "exclude": [
+    "../node_modules/@types/**",
+    // Exclude schematic template files and test cases which aren't valid TS files.
+    "../src/material/schematics/ng-generate/*/files/**/*",
+    "../src/cdk/schematics/ng-generate/*/files/**/*",
+    "../src/cdk/schematics/ng-update/test-cases/**/*",
+    "../src/material/schematics/ng-update/test-cases/**/*",
+    "../src/material/schematics/ng-update/**/*",
+    "../src/test.ts",
+    "../src/material/**/*.spec.ts",
+  ]
+}

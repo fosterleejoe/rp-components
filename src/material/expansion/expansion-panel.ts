@@ -116,6 +116,7 @@ export class MatExpansionPanel extends CdkAccordionItem implements AfterContentI
   /** The position of the expansion indicator. */
   @Input()
   get togglePosition(): MatAccordionTogglePosition {
+    // @ts-ignore
     return this._togglePosition || (this.accordion && this.accordion.togglePosition);
   }
   set togglePosition(value: MatAccordionTogglePosition) {

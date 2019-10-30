@@ -471,6 +471,7 @@ export class OverlayRef implements PortalOutlet, OverlayReference {
     // Run this outside the Angular zone because there's nothing that Angular cares about.
     // If it were to run inside the Angular zone, every test that used Overlay would have to be
     // either async or fakeAsync.
+    // @ts-ignore
     timeoutId = this._ngZone.runOutsideAngular(() => setTimeout(finishDetach, 500));
   }
 

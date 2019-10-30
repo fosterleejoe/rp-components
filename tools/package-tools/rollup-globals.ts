@@ -125,7 +125,9 @@ export const rollupGlobals = {
   // Miscellaneous components
   '@angular/google-maps': 'ng.googleMaps',
   '@angular/youtube-player': 'ng.youtubePlayer',
-
+  '@storybook/angular': '@storybook/angular',
+  '@storybook/addon-knobs': '@storybook/addon-knobs',
+  '@storybook/addon-actions': '@storybook/addon-actions',
   // Include secondary entry-points of the cdk and material packages
   ...rollupCdkEntryPoints,
   ...rollupMatEntryPoints,
