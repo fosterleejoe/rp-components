@@ -1,0 +1,29 @@
+@import '../core/typography/typography-utils';
+@import '../core/theming/palette';
+@import '../core/style/elevation';
+
+@mixin mat-banner-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  $divider: map-get($theme, divider);
+
+  .mat-banner {
+    // Use the primary text on the dark theme, even though the lighter one uses
+    // a secondary, because the contrast on the light primary text is poor.
+    background: mat-color($background, banner);
+    color: mat-color($foreground, text);
+    @debug $divider;
+    border-bottom: 1px solid mat-color($divider, divider);
+
+    @include _mat-theme-elevation(0, $theme);
+  }
+}
+
+@mixin mat-snack-bar-typography($config) {
+  .mat-banner {
+    font: {
+      family: mat-font-family($config, body-1);
+      size: mat-font-size($config, body-1);
+    }
+  }
+}

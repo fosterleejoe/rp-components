@@ -1,0 +1,24 @@
+<div class="mat-banner"
+     [@bannerAnimation]="show ? 'enter' : 'exit'"
+     (@bannerAnimation.done)="animationDone($event)">
+  <ng-container >
+    <div class="mat-banner-content">
+      <mat-icon *ngIf="icon">{{icon}}</mat-icon>
+      <span>{{message}}</span>
+    </div>
+    <div *ngIf="actions && actions.length" class="mat-banner-actions">
+      <button mat-button 
+              *ngFor="let action of actions"
+              (click)="onClose(action)"
+              color="primary">{{action}}
+      </button>
+    </div>
+
+    <div *ngIf="!actions || !actions.length" class="mat-banner-actions">
+      <button mat-button 
+              (click)="onClose('cancel')"
+              color="primary">Cancel
+      </button>
+    </div>
+  </ng-container>
+</div>

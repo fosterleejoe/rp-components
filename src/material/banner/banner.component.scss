@@ -1,0 +1,40 @@
+$mat-banner-padding: 10px 8px 8px 16px;
+$mat-banner-divider: 1px solid rgba(0, 0, 0, .12);
+$mat-actions-margin: 15px;
+
+.mat-banner {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: $mat-banner-padding;
+  border-bottom: $mat-banner-divider;
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > :first-child {
+      margin-right: 15px;
+    }
+
+    & > :last-child {
+      margin-right: 0;
+    }
+  }
+
+  .mat-banner-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .mat-button {
+      margin-right: $mat-actions-margin;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

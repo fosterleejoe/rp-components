@@ -73,8 +73,8 @@
     "@bazel/ibazel": "^0.10.3",
     "@bazel/jasmine": "^0.38.3",
     "@bazel/karma": "^0.38.3",
-    "@bazel/typescript": "^0.38.3",
     "@bazel/protractor": "^0.38.3",
+    "@bazel/typescript": "^0.38.3",
     "@firebase/app-types": "^0.3.2",
     "@octokit/rest": "^16.28.7",
     "@schematics/angular": "^9.0.0-next.15",
@@ -153,7 +153,7 @@
     "tsconfig-paths": "^2.3.0",
     "tslint": "^5.20.0",
     "tsutils": "^3.0.0",
-    "typescript": "^3.6.4",
+    "typescript": "3.6.4",
     "uglify-js": "^2.8.14",
     "vrsource-tslint-rules": "5.1.1"
   },
